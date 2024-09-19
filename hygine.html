@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist with Progress</title>
+    <link rel="stylesheet" href="hygine.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <button id="toggleSidebar" class="arrow-btn"></button>
+      <div class="sidebar">
+        <button id="exitButton" class="exit-btn">Exit</button>
+        <br />
+        <br />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        <ul id="videoList">
+          <li>
+            <a href="#" data-video-id="l2GdFobEcbI"
+              >Video 1: Take regular shower
+              <span class="playing-symbol">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div> </span
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-video-id="9fI_hEz2oM0">Video 2: Maintain oral hygiene</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="Br4sQmiJ1jU">Video 3: Wash your hands before and after eating</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="1cwSHomb9fo"
+              >Video 4: Clean your nose and ears</a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="mqjMSiGzcZM">Video 5: Wear fresh and warm clothes</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="nf4R6XHCU4Q">Video 6: Food hygiene</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="dch0yR8DY8">Video 7: Carrying hand sanitizers is highly recommended</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="QGvw_e1N5Ho">Video 8: Keep your surroundings neat and clean</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="5HFh5KxML-4">Video 9: Covering their mouth while they cough</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="RsYgmatFPBk">Video 10: Wash your genitals</a>
+          </li>
+          
+          
+          <li id="quizLinkItem" style="display: none">
+            <button id="quizButton">Take the Quiz</button>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="player"></div>
+        <div id="quizContent"></div>
+        <div class="simple-buttons">
+          <button id="startFromBeginning">Start from Beginning</button>
+          <button id="prevVideo">Previous</button>
+          <button id="nextVideo">Next</button>
+          <button id="markAsComplete">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="hygine.js"></script>
+  </body>
+</html>
