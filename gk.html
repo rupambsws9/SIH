@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist with Progress</title>
+    <link rel="stylesheet" href="gk.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <button id="toggleSidebar" class="arrow-btn"></button>
+      <div class="sidebar">
+        <button id="exitButton" class="exit-btn">Exit</button>
+        <br />
+        <br />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        <ul id="videoList">
+          <li>
+            <a href="#" data-video-id="fIF016JROiA"
+              >Video 1: Vrikshasana
+              <span class="playing-symbol">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div> </span
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-video-id="QM9x8ZpaYPc">Video 2: Tadasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="misHjEvOskI">Video 3: Trikonasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="i_ix1f99Vn4"
+              >Video 4: Ardha Chakrasana</a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="_oM_OGcaSRQ">Video 5: Padahastasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="X-oPQ9eO360">Video 6: Bhadrasan</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="JDzDfraiR7U">Video 7: Ustrasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="GDwDN0DUNm8">Video 8: Vajrasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="i7460Bqvz3Q">Video 9: Shashankasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="HYq5Ao1LOAk">Video 10: Vakrasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="-HgeZztTSec">Video 11: Bhujangasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="dkCiQuLwI1U">Video 12: Shalabhasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="6w4chpJaQl4">Video 13: Pawanmuktasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="xIMRYcA7TkA">Video 14: Setubandhasana</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="TSvxys_Ywq0"
+              >Video 15: Nadi Shodhan Pranayam</a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="-73jLhEosSQ">Video 16: Dhyana</a>
+          </li>
+          <li id="quizLinkItem" style="display: none">
+            <button id="quizButton">Take the Quiz</button>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="player"></div>
+        <div id="quizContent"></div>
+        <div class="simple-buttons">
+          <button id="startFromBeginning">Start from Beginning</button>
+          <button id="prevVideo">Previous</button>
+          <button id="nextVideo">Next</button>
+          <button id="markAsComplete">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="gk.js"></script>
+  </body>
+</html>

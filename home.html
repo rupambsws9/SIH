@@ -1,11 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mate SC:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Li Alinur Banglaborno Unicode:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Li Al Quds Unicode:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <h1>Home Hello World!</h1>
+    <div class="home-page">
+      <img class="home-page-child" alt="" src="Rectangle 13.svg" />
+
+      <img class="image-of-a-rural-girl" alt="" src="/src/rural_girl.png" />
+
+      <div class="logo-of-portal">
+        <div class="logo-of-portal-child"></div>
+        <div class="p-l-a">P L A T F O R M</div>
+        <div class="grameenshiksha">GrameenShiksha</div>
+        <img
+          class="hugeiconselearning-exchange"
+          alt=""
+          src="/src/logo.jpg"
+        />
+      </div>
+      <div class="sub-heading">
+        Welcome to GrameenShiksha Portal.The GrameenSiksha portal provides rural
+        students with advanced educational tools, including virtual classrooms
+        and interactive content, enhancing their learning experience. It bridges
+        the digital divide by offering seamless connectivity and comprehensive
+        support services.
+      </div>
+      <div class="heading" >Up Skill Your Skill With Your GrameenShiksha</div>
+        <button class="login" id="login">Login</button>
+        <button class="signup" id="signUp">
+          <span>Sign</span>
+          <span class="up"> Up</span>
+        </button>
+        </div>
+      <img class="home-page-item" alt="" src="/src/Ellipse 1.png" />
+        <button class="live-class" id="liveClass">Live Class</button>
+        <button class="demo-class" id="demoClass">Demo Class</button>
+
+      <div class="home-page-inner"></div>
+      <div class="quizes" id="quizesText">Community Group</div>
+      <div class="ebook" id="eBookText">eBook</div>
+      <div class="home" id="home">Home</div>
+      <div class="courses" id="courses">Courses</div>
+      <div class="the-grameensikha-platform">
+        The Grameensikha platform offers students an immersive learning
+        experience through virtual classrooms and animated video lessons. It
+        ensures seamless connectivity, efficient human resource management, and
+        interactive e-learning content creation. The platform also features a
+        doubt engine with chatbot assistance and a help-line for personalized
+        support, empowering students in rural areas with modern education.
+      </div>
+      <div class="why-choose-grameenshiksha" font-size="54">Why Choose GrameenShiksha?</div>
+      <img class="banner1-3d2x-1-icon" alt="" src="/src/banner.png" />
+
+      <img class="quizz-1-icon" alt="" src="/src/1.png" />
+        <div class="quizzes-videos-live-container">
+        <p class="p">1600+</p>
+        <p class="quizzes-videos-live">Quizzes, Videos, Live Classes</p>
+      </div> 
+      <img class="feature2-3d2x-1-icon" alt="" src="/src/3.png" />
+      <div class="professional-mentors">
+        <p class="p">20+</p>
+        <p class="quizzes-videos-live">Professional Mentors</p>
+      </div>
+      <img class="image-1-icon" alt="" src="/src/4.png" />
+
+      <div class="rectangle-div"></div>
+      <div class="certificate-course-completion-container">
+        <p class="p">Certificate</p>
+        <p class="quizzes-videos-live">Course Completion Certificate</p>
+      </div>
+      <div class="support-call-container">
+        <p class="p">1:1 Support</p>
+        <p class="quizzes-videos-live">Call & Chat support</p>
+      </div>
+      <img class="libray-1-icon" alt="" src="/src/libray.png" />
+
+      <img class="image-2-icon" alt="" src="/src/2.png" />
+
+      <div class="about-us" id="aboutUsText">About Us</div>
+      <div class="contact-us" id="contactUsText">Contact Us</div>
+      <div class="may-i-help">MAY I HELP YOU ?</div>
+      <img class="rectangle-icon" alt="" src="/src/copyright.jpg" />
+      <a href="robot.html"><img
+        class="cute-robot-sitting-with-text-c-icon"
+        alt="chatbot"
+        src="/src/robot.png"
+      /></a>
+    </div>
+
+    <script>
+      document
+        .getElementById("eBookText")
+        .addEventListener("click", function () {
+          window.location.href = "ebook.html";
+        });
+
+      document
+        .getElementById("signUp")
+        .addEventListener("click", function () {
+          window.location.href = "signup.html";
+        });
+        document
+        .getElementById("login")
+        .addEventListener("click", function () {
+          window.location.href = "login.html";
+        });
+        document
+        .getElementById("quizesText")
+        .addEventListener("click", function () {
+          window.location.href = "comgrp.html";
+        });
+        document
+        .getElementById("aboutUsText")
+        .addEventListener("click", function () {
+          window.location.href = "about.html";
+        });
+        document
+        .getElementById("contactUsText")
+        .addEventListener("click", function () {
+          window.location.href = "contact.html";
+        });
+        document
+        .getElementById("contactUsText")
+        .addEventListener("click", function () {
+          window.location.href = "contact.html";
+        });
+        document
+        .getElementById("courses")
+        .addEventListener("click", function () {
+          window.location.href = "courses.html";
+        });
+        document
+        .getElementById("demoClass")
+        .addEventListener("click", function () {
+          window.location.href = "democlass.html";
+        });
+        document
+        .getElementById("liveClass")
+        .addEventListener("click", function () {
+          window.location.href = "liveclass.html";
+        });
+        document
+        .getElementById("courses")
+        .addEventListener("click", function () {
+          window.location.href = "courses.html";
+        });
+    </script>
   </body>
 </html>

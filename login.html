@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Exit</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="topRow">
+      <button id="button-openform">
+        <p>
+          <i class="bi bi-person-circle"></i
+          ><span class="non-italic"> Login</span>
+        </p>
+      </button>
+    </div>
+    <!-- Login form begins -->
+    <section class="admin">
+      <div class="container-login">
+        <div class="closeButton"><i class="bi bi-x-lg"></i></div>
+        <form action="">
+          <label for="login-username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="login-username"
+            placeholder="Enter your Username"
+          />
+
+          <label for="login-password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="login-password"
+            placeholder="Enter your Password"
+          />
+
+          <div class="loginbuttons">
+            <button class="button-login" type="submit">Login</button>
+            <button class="button-login-signup" id="signup">Sign Up</a</button>
+          </div>
+          <a class="forgetPWLink" href="#">Forget Password</a>
+        </form>
+      </div>
+
+      <div class="forgetPW">
+        <div class="closeButtonForgetPW"><i class="bi bi-x-lg"></i></div>
+        <form action="">
+          <label for="forget-username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="forget-username"
+            placeholder="Enter your Username"
+          />
+
+          <label for="forget-email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="forget-email"
+            placeholder="Enter your Email"
+          />
+
+          <button class="forgetPWBtn" type="submit">Submit</button>
+          <p>Note - Password is sent to registered Email</p>
+        </form>
+      </div>
+    </section>
+    <!-- login form ends -->
+    <script src="login.js"></script>
+  </body>
+</html>

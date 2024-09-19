@@ -1,0 +1,150 @@
+after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.text-blk {
+  padding: 0;
+  line-height: 20px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.responsive-container-block {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.responsive-container-block.bigContainer {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.responsive-container-block.Container {
+  max-width: 1320px;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto;
+}
+
+.responsive-container-block.leftSide {
+  flex: 1;
+  padding: 10px 0;
+  max-width: 300px;
+}
+
+.text-blk.heading {
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: 900;
+  color: #00b2eb;
+  margin-bottom: 40px;
+}
+
+.text-blk.subHeading {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.text-blk.btn {
+  color: rgb(0, 178, 235);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(160, 121, 0, 0.2) 0px 12px 35px;
+  border-radius: 100px;
+  padding: 20px 50px;
+  cursor: pointer;
+}
+
+.responsive-container-block.rightSide {
+  width: 675px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Unified image styling for equal frame ratio */
+.rightSide img {
+  width: 30%; /* Set consistent width for all images */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure the images fill the frame while preserving aspect ratio */
+  border-radius: 8px; /* Rounded corners for all images */
+  margin: 10px; /* Uniform spacing around images */
+  height: auto; /* Let height adjust based on width */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .responsive-container-block.Container {
+    flex-direction: column-reverse;
+  }
+
+  .text-blk.heading {
+    text-align: center;
+    max-width: 370px;
+  }
+
+  .text-blk.subHeading {
+    text-align: center;
+  }
+
+  .responsive-container-block.leftSide {
+    align-items: center;
+    max-width: 480px;
+  }
+
+  .responsive-container-block.rightSide {
+    margin: 0 auto 100px auto;
+    justify-content: center;
+  }
+
+  .rightSide img {
+    width: 45%; /* Larger width for images on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-container-block.rightSide {
+    width: 450px;
+    height: auto;
+  }
+
+  .responsive-container-block.leftSide {
+    max-width: 450px;
+  }
+
+  .rightSide img {
+    width: 45%; /* Adjust image width for smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .rightSide img {
+    width: 90%; /* Full-width images on very small screens */
+    margin: 5px auto; /* Center images and reduce spacing */
+  }
+
+  .responsive-container-block.leftSide {
+    width: 100%;
+  }
+
+  .text-blk.heading {
+    font-size: 25px;
+    line-height: 40px;
+    max-width: 370px;
+  }
+
+  .text-blk.subHeading {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix Web Design Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+    <!-- Link to FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Link to your stylesheet -->
+    <link rel="stylesheet" href="styles70.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="brand"><span>CONTACT US</span></h1>
+
+      <div class="wrapper">
+        <!-- COMPANY INFORMATION -->
+        <div class="company-info">
+          <h3>GRAMEEN SHIKSHA</h3>
+          <ul>
+            <li><i class="fa fa-road"></i> KALYANI , WEST BENGAL</li>
+            <li><i class="fa fa-phone"></i> +91 9999999999</li>
+            <li><i class="fa fa-envelope"></i> demo@gmail.com</li>
+          </ul>
+        </div>
+        <!-- End .company-info -->
+
+        <!-- CONTACT FORM -->
+        <div class="contact">
+          <h3>E-mail Us</h3>
+          <form id="contact-form">
+            <p>
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </p>
+            <p>
+              <label for="company">Company</label>
+              <input type="text" name="company" id="company" />
+            </p>
+            <p>
+              <label for="email">E-mail Address</label>
+              <input type="email" name="email" id="email" required />
+            </p>
+            <p>
+              <label for="phone">Phone Number</label>
+              <input type="text" name="phone" id="phone" />
+            </p>
+            <p class="full">
+              <label for="message">Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit" id="submit">Submit</button>
+            </p>
+          </form>
+          <!-- End #contact-form -->
+        </div>
+        <!-- End .contact -->
+      </div>
+      <!-- End .wrapper -->
+    </div>
+    <!-- End .container -->
+    <script>
+      document.getElementById("submit").addEventListener("click", function () {
+        window.location.href = "home.html";
+      });
+    </script>
+  </body>
+</html>

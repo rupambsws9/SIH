@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .signup-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .signup-box {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+  }
+
+  .form-text {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .input-box input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .input-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7d2ae8;
+  }
+
+  .button-box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .signup-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #7d2ae8;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .signup-btn:hover {
+    background-color: #5b1ba8;
+  }
+
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .login-link a {
+    color: #7d2ae8;
+    text-decoration: none;
+  }
+
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="signup-container">
+  <div class="signup-box">
+    <div class="form-section">
+      <h2>Create Your Account</h2>
+      <p class="form-text">Fill in the form below to get started!</p>
+
+      <form id="signupForm">
+        <div class="input-box">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Full Name" required />
+        </div>
+
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email Address" required />
+        </div>
+
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" required id="passwordField" />
+        </div>
+
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Confirm Password" required />
+        </div>
+
+        <div class="button-box">
+          <button type="submit" class="signup-btn">Signup</button>
+        </div>
+
+        <div class="login-link">
+          Already have an account? <a href="#">Login here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  /* document.getElementById("signupForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form from submitting by default
+
+    // Get the password value from the input field
+    const password = document.getElementById("passwordField").value;
+
+    // Check if the password is '1234'
+    if (password === "1234") {
+      // Redirect to the next page
+      window.location.href = "nextpage.html"; // Change "nextpage.html" to your desired page
+    } else {
+      // If password is incorrect, alert the user
+      alert("Incorrect password. Please try again.");
+    }
+  }); */

@@ -1,0 +1,542 @@
+.home-page-child {
+  position: absolute;
+  top: 1665.5px;
+  left: 0px;
+  width: 1440px;
+  height: 839.5px;
+}
+.image-of-a-rural-girl {
+  position: absolute;
+  top: 95px;
+  left: 41px;
+  width: 163px;
+  height: 186px;
+  object-fit: cover;
+}
+.logo-of-portal-child {
+  position: absolute;
+  width: calc(100% + 1261px);
+  top: -11px;
+  right: -1220px;
+  left: -41px;
+  background-color: #9f96ff;
+  height: 61px;
+}
+.p-l-a {
+  position: absolute;
+  width: calc(100% - 72px);
+  top: 24px;
+  left: 42px;
+  white-space: pre-wrap;
+  display: inline-block;
+  height: 10px;
+}
+.grameenshiksha {
+  position: absolute;
+  width: calc(100% - 38px);
+  top: 4px;
+  left: 38px;
+  font-size: 16px;
+  color: var(--color-white);
+  display: inline-block;
+}
+.hugeiconselearning-exchange {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+}
+.logo-of-portal {
+  position: absolute;
+  top: 11px;
+  left: 41px;
+  width: 199px;
+  height: 38px;
+  font-size: 10px;
+  color: #0f0d0d;
+  font-family: var(--font-mate-sc);
+}
+.sub-heading {
+  position: absolute;
+  top: 260px;
+  left: 257px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-li-alinur-banglaborno-unicode);
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  width: 644px;
+}
+.heading {
+  position: absolute;
+  top: 116px;
+  left: 240px;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  width: 609px;
+}
+.login {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-39xl);
+  background: linear-gradient(90deg, #b4f8fd, #90f3f9);
+}
+.signup {
+  position: absolute;
+  width: 58.14%;
+  top: 13.33%;
+  left: 20.93%;
+  display: inline-block;
+  cursor: pointer;
+}
+.login {
+  position: absolute;
+  top: 94px;
+  left: 1203px;
+  width: 129px;
+  height: 45px;
+  text-align: center;
+  font-family: var(--font-li-alinur-banglaborno-unicode);
+}
+
+.signup {
+  position: absolute;
+  top: 95px;
+  left: 1051px;
+  width: 129px;
+  height: 45px;
+  text-align: center;
+  font-family: var(--font-li-alinur-banglaborno-unicode);
+}
+.home-page-item {
+  position: absolute;
+  top: 61px;
+  left: 1332px;
+  width: 228px;
+  height: 213px;
+}
+.rectangle-for-demo-class {
+  width: 211px;
+  position: relative;
+  border-radius: var(--br-39xl);
+  height: 64px;
+  z-index: 0;
+}
+.rectangle-for-live {
+  width: 211px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-39xl);
+  background-color: #cfe86d;
+  height: 64px;
+  z-index: 1;
+}
+.live-class {
+  width: 103px;
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 18px);
+  left: calc(50% + 114px);
+  display: flex;
+  align-items: center;
+  height: 29.2px;
+  z-index: 3;
+}
+.demo-class {
+  width: 129px;
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 15px);
+  left: calc(50% - 203px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+.rectangle-for-demo-class-parent {
+  position: absolute;
+  top: 393px;
+  left: 271px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 84px;
+}
+.vector-icon1 {
+  position: absolute;
+  height: 0.8%;
+  width: 1.39%;
+  top: 16.73%;
+  right: 78.13%;
+  bottom: 82.48%;
+  left: 20.49%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.home-page-inner {
+  position: absolute;
+  top: 497px;
+  left: 0px;
+  background: linear-gradient(90deg, #b2dff9, #bbe6ff);
+  width: 1440px;
+  height: 58px;
+}
+.quizes {
+  position: absolute;
+  top: 508px;
+  left: 705px;
+  cursor: pointer;
+}
+.ebook {
+  position: absolute;
+  top: 508px;
+  left: 465px;
+  cursor: pointer;
+}
+.home {
+  position: absolute;
+  top: 508px;
+  left: 41px;
+}
+
+.courses {
+  text-align: center;
+  position: absolute;
+  top: 508px;
+  left: 250px;
+  width: 70px;
+  height: 15px;
+  color: #0056b3; /* Change the color to a darker blue */
+  cursor: pointer; /* Show pointer on hover */
+  transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.courses:hover {
+  color: #0088ff; /* Lighter blue on hover */
+}
+.the-grameensikha-platform {
+  position: absolute;
+  width: calc(100% - 652px);
+  top: 1382px;
+  left: 347px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-li-alinur-banglaborno-unicode);
+  color: #040404;
+  display: flex;
+  align-items: center;
+}
+.why-choose-grameenshiksha {
+  position: absolute;
+  width: calc(100% - 789px);
+  top: 1297px;
+  left: 455px;
+  font-size: var(--font-size-21xl);
+  display: flex;
+  align-items: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.banner1-3d2x-1-icon {
+  position: absolute;
+  top: 65rem;
+  left: calc(50% - 106px);
+  border-radius: 16px;
+  width: 333px;
+  height: 197px;
+  object-fit: cover;
+}
+.quizz-1-icon {
+  position: absolute;
+  top: 1785px;
+  left: 225px;
+  width: 175px;
+  height: 133px;
+  object-fit: cover;
+}
+.p {
+  margin-block-start: 0;
+  margin-block-end: 8px;
+}
+.quizzes-videos-live {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-li-alinur-banglaborno-unicode);
+}
+.quizzes-videos-live-container {
+  position: absolute;
+  top: 1785px;
+  left: 412px;
+  text-align: center;
+  display: inline-block;
+  width: 197px;
+  height: 124px;
+  font-size: var(--font-size-21xl);
+}
+.feature2-3d2x-1-icon {
+  position: absolute;
+  top: 1780px;
+  left: 716px;
+  width: 175px;
+  height: 133px;
+  object-fit: cover;
+}
+.professional-mentors {
+  position: absolute;
+  top: 1805px;
+  left: 903px;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+}
+.image-1-icon {
+  position: absolute;
+  top: 1981px;
+  left: 226px;
+  width: 175px;
+  height: 133px;
+  object-fit: cover;
+}
+.rectangle-div {
+  position: absolute;
+  top: 1630px;
+  left: 777px;
+  border-radius: 1500px 0px 0px 0px;
+  background-color: #ddf9f8;
+  width: 914px;
+  height: 875px;
+}
+.certificate-course-completion-container {
+  position: absolute;
+  top: 2000px;
+  left: 909px;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+}
+.support-call-container {
+  position: absolute;
+  top: 2000px;
+  left: 396px;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+}
+.libray-1-icon {
+  position: absolute;
+  top: 557px;
+  left: 1006px;
+  width: 478px;
+  height: 260px;
+  object-fit: cover;
+}
+.image-2-icon {
+  position: absolute;
+  top: 1989px;
+  left: 709px;
+  width: 175px;
+  height: 133px;
+  object-fit: cover;
+}
+.about-us {
+  position: absolute;
+  top: 16px;
+  left: 1033px;
+  text-decoration: underline;
+  color: var(--color-white);
+  display: inline-block;
+  width: 103px;
+  height: 28px;
+  cursor: pointer;
+}
+.contact-us {
+  position: absolute;
+  top: 16px;
+  left: 1171px;
+  text-decoration: underline;
+  color: var(--color-white);
+  display: inline-block;
+  width: 134px;
+  height: 28px;
+  cursor: pointer;
+}
+.may-i-help {
+  position: absolute;
+  top: 898px;
+  left: 128px;
+  font-size: 32px;
+}
+.item-component {
+  position: absolute;
+  top: 513px;
+  left: 178px;
+  width: 210px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rectangle-icon {
+  position: absolute;
+  top: 2452px;
+  left: 0px;
+  width: 1440px;
+  height: 53px;
+}
+.copyright-2024-2030 {
+  position: absolute;
+  top: 2454px;
+  left: 396px;
+  font-family: var(--font-li-alinur-banglaborno-unicode);
+  background: linear-gradient(#fff, #fff), #000;
+  -webkit-: text;
+  -webkit-text-fill-color: transparent;
+}
+.cute-robot-sitting-with-text-c-icon {
+  position: absolute;
+  top: 870px;
+  left: 400px;
+  width: 96px;
+  height: 103px;
+  object-fit: cover;
+}
+.home-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 2505px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-li-al-quds-unicode);
+}
+
+button,
+.home,
+.quizes,
+.ebook,
+.courses,
+.signUp,
+.login {
+  border: 2px solid transparent;
+  border-radius: var(--br-39xl);
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Hover Effects */
+button:hover,
+.home:hover,
+.quizes:hover,
+.ebook:hover,
+.courses:hover {
+  border-color: #007bff; /* Border color on hover */
+  background-color: #f0f8ff; /* Background color on hover */
+  color: #007bff; /* Text color on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Active Effects */
+button:active,
+.home:active,
+.quizes:active,
+.ebook:active,
+.courses:active,
+.signUp:active,
+.login:active {
+  transform: scale(0.95); /* Slightly decrease size on click */
+}
+
+/* Specific Element Styles */
+.login,
+.signup {
+  background-color: lightyellow !important;
+  color: black;
+  border: 2px solid brown !important;
+}
+
+.home {
+  background: #e0f7fa;
+  color: #00796b;
+}
+
+.quizes {
+  background: #f1f8e9;
+  color: #388e3c;
+}
+
+.ebook {
+  background: #fff3e0;
+  color: #fb8c00;
+}
+
+.courses {
+  background: #e3f2fd;
+  color: brown;
+  size: 0.1rem;
+}
+
+/* Additional Styles for Borders */
+.live-class,
+.demo-class {
+  border: 0.1rem solid green; /* Border color for demo/live class elements */
+  background-color: lightcyan; /* Background color */
+  width: 120px;
+  height: 50px;
+  border-radius: 5px; /* Border-radius to match */
+}
+
+.live-class:hover,
+.demo-class:hover {
+  border: 2px solid blue; /* Border color on hover */
+  background-color: #e8f5e9; /* Background color on hover */
+}
+
+/* General Container */
+.rectangle-for-demo-class-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 84px;
+}
+
+/* Existing CSS for About Us and Contact Us */
+.about-us,
+.contact-us {
+  text-decoration: underline;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects */
+.about-us:hover {
+  color: #ffeb3b; /* Text color on hover */
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7); /* Glowing effect */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.contact-us:hover {
+  color: #ffeb3b; /* Text color on hover */
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.7); /* Glowing effect */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Additional styles for text-shadow and transform for active state */
+.about-us:active,
+.contact-us:active {
+  transform: scale(1); /* Ensure the element returns to normal size on click */
+}
