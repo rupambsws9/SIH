@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  .container {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    top: 0;
+  }
+  .sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  .content {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin: 10px 0;
+  }
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  a.completed {
+    color: green;
+    font-weight: bold;
+  }
+  a.purple {
+    color: purple;
+  }
+  button#quizButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button#quizButton.visited {
+    background-color: darkblue;
+  }
+  button#quizButton.completed {
+    background-color: green;
+  }
+  iframe {
+    width: 100%;
+    height: 630px;
+    border: none;
+    margin-top: 20px;
+  }
+  .progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 25px;
+    margin-top: 20px;
+  }
+  .progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: green;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+  }
+  
+  .container {
+    position: absolute; /* For absolute positioning within it */
+    display: flex;
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  
+  .sidebar {
+    width: 20%;
+    height: 40rem;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    position: relative; /* Position relative to place the arrow button inside it */
+  }
+  
+  .arrow-btn {
+    position: relative;
+    top: 0.1px; /* Position it a bit from the top of the sidebar */
+    right: -0.1px; /* Position it just outside the sidebar when visible */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.1s ease; /* Smooth transition for positioning */
+    height: 2rem;
+    width: 2rem;
+    align-content: center;
+    border-radius: 5px;
+  }
+  
+  .arrow-btn.collapsed {
+    right: 0; /* Position it right at the edge of the sidebar when collapsed */
+    top: 0; /* Move it to the top of the sidebar */
+    transform: rotate(360deg); /* Rotate to indicate left when collapsed */
+  }
+  
+  .exit-btn {
+    position: relative;
+    top: 0.1px;
+    left: 220px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .exit-btn:hover {
+    border-color: black;
+  }
+  
+  .content {
+    margin-top: 12px;
+    margin-left: -20px;
+  }
+  
+  .navbar {
+    background-color: #007bff;
+  }
+  
+  .simple-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .simple-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    padding: 25px;
+  }
+  
+  .simple-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Existing CSS code, no changes needed */
+  
+  .content {
+    margin-top: 12px;
+    margin-left: -20px;
+    position: relative; /* Ensure content is positioned relative to its parent */
+  }
+  
+  .simple-buttons {
+    position: relative; /* Use relative positioning within the content div */
+    top: 2px; /* Adjust this value as needed */
+    left: 0; /* Adjust this value as needed */
+  }
+  
+  .simple-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative; /* Relative positioning within .simple-buttons */
+    margin-right: 10px; /* Space between buttons */
+  }
+  
+  .simple-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Base styles for the mobile tower animation */
+  .playing-symbol {
+    display: inline-block;
+    height: 20px;
+    margin-left: 10px;
+    position: relative;
+    width: 20px;
+  }
+  
+  /* The individual bars of the tower */
+  .bar {
+    position: absolute;
+    bottom: 0;
+    width: 4px;
+    background-color: #00bfff; /* Light blue color for the bars */
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Specific bar positions and heights */
+  .bar-1 {
+    left: 0;
+    height: 30%;
+    animation-delay: 0s;
+  }
+  
+  .bar-2 {
+    left: 6px;
+    height: 50%;
+    animation-delay: 0.3s;
+  }
+  
+  .bar-3 {
+    left: 12px;
+    height: 70%;
+    animation-delay: 0.6s;
+  }
+  
+  .bar-4 {
+    left: 18px;
+    height: 90%;
+    animation-delay: 0.9s;
+  }
+  
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scaleY(0.3);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+  
