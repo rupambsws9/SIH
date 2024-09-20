@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Student Dashboard</title>
+    <style>
+      /* Reset and Base Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f2f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Container Styles */
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Styles */
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .header h2 {
+        color: #4caf50;
+        font-size: 2em;
+      }
+
+      /* Form Styles */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus {
+        border-color: #4caf50;
+        outline: none;
+      }
+
+      .form-group button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-group button:hover {
+        background-color: #45a049;
+      }
+
+      /* Dashboard Styles */
+      .dashboard {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .student-details,
+      .course-section {
+        margin-bottom: 30px;
+      }
+
+      .student-details {
+        display: flex;
+        align-items: center;
+      }
+
+      .student-details img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #4caf50;
+        margin-right: 20px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .student-details img:hover {
+        transform: scale(1.05);
+      }
+
+      .student-info p {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      .progress-container {
+        margin-top: 10px;
+      }
+
+      .progress-bar {
+        width: 100%;
+        background-color: #f1f1f1;
+        border-radius: 25px;
+        overflow: hidden;
+        height: 30px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+
+      .progress-bar-fill {
+        height: 100%;
+        width: 0;
+        background-color: #4caf50;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: width 0.5s ease-in-out;
+      }
+
+      /* Course List Styles */
+      .course-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .course-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fafafa;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .course-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .course-item.completed {
+        background-color: #d4edda;
+        text-decoration: line-through;
+        color: #155724;
+      }
+
+      .course-item button {
+        padding: 8px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .course-item button:hover {
+        background-color: #45a049;
+      }
+
+      /* Certificate Button */
+      .certificate-btn {
+        display: none;
+        width: 220px;
+        margin: 0 auto;
+        padding: 12px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .certificate-btn:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .student-details {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .student-details img {
+          margin-bottom: 20px;
+        }
+
+        .student-info,
+        .course-info {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Initial Registration Form -->
+    <div class="container" id="initial-form">
+      <div class="header">
+        <h2>Student Registration</h2>
+      </div>
+      <div class="form-group">
+        <label for="profile-pic">Profile Picture URL:</label>
+        <input
+          type="url"
+          id="profile-pic-input"
+          placeholder="Enter image URL"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name-input" placeholder="Enter your full name" />
+      </div>
+      <div class="form-group">
+        <label for="college">College:</label>
+        <input
+          type="text"
+          id="college-input"
+          placeholder="Enter your college name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email-input" placeholder="Enter your email" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone-input"
+          placeholder="Enter your phone number"
+        />
+      </div>
+      <div class="form-group">
+        <label for="num-courses">Number of Enrolled Courses:</label>
+        <input
+          type="number"
+          id="num-courses-input"
+          min="1"
+          placeholder="Enter number of courses"
+        />
+      </div>
+      <div class="form-group">
+        <button id="start-dashboard-btn">Start Dashboard</button>
+      </div>
+    </div>
+
+    <!-- Student Dashboard -->
+    <div class="container dashboard" id="dashboard">
+      <div class="header">
+        <h2>Student Dashboard</h2>
+      </div>
+
+      <div class="student-details">
+        <img
+          src="https://via.placeholder.com/100"
+          alt="Profile Picture"
+          class="profile-pic"
+          id="profile-pic-display"
+        />
+        <div class="student-info">
+          <p><strong>Name:</strong> <span id="student-name">John Doe</span></p>
+          <p>
+            <strong>College:</strong>
+            <span id="student-college">Example University</span>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <span id="student-email">john.doe@example.com</span>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <span id="student-phone">(123) 456-7890</span>
+          </p>
+          <p>
+            <strong>Enrolled Courses:</strong>
+            <span id="total-courses-display">0</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="course-section">
+        <h3>Course Progress</h3>
+        <p>Completed Courses: <span id="completed-courses-display">0</span></p>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="progress-bar-fill">0%</div>
+        </div>
+
+        <div class="form-group course-input">
+          <label for="course-name-input">Add a Course:</label>
+          <input
+            type="text"
+            id="course-name-input"
+            placeholder="Enter course name"
+          />
+          <button id="add-course-btn">Add Course</button>
+        </div>
+
+        <ul class="course-list" id="course-list"></ul>
+      </div>
+
+      <!-- Certificate Section -->
+      <a href="#" class="certificate-btn" id="certificate-btn"
+        >Download Certificate</a
+      >
+    </div>
+
+    <script>
+      // DOM Elements
+      const startDashboardBtn = document.getElementById("start-dashboard-btn");
+      const dashboard = document.getElementById("dashboard");
+      const initialForm = document.getElementById("initial-form");
+      const profilePicInput = document.getElementById("profile-pic-input");
+      const profilePicDisplay = document.getElementById("profile-pic-display");
+      const nameInput = document.getElementById("name-input");
+      const studentName = document.getElementById("student-name");
+      const collegeInput = document.getElementById("college-input");
+      const studentCollege = document.getElementById("student-college");
+      const emailInput = document.getElementById("email-input");
+      const studentEmail = document.getElementById("student-email");
+      const phoneInput = document.getElementById("phone-input");
+      const studentPhone = document.getElementById("student-phone");
+      const numCoursesInput = document.getElementById("num-courses-input");
+      const totalCoursesDisplay = document.getElementById(
+        "total-courses-display"
+      );
+      const completedCoursesDisplay = document.getElementById(
+        "completed-courses-display"
+      );
+      const progressBarFill = document.getElementById("progress-bar-fill");
+      const courseNameInput = document.getElementById("course-name-input");
+      const addCourseBtn = document.getElementById("add-course-btn");
+      const courseList = document.getElementById("course-list");
+      const certificateBtn = document.getElementById("certificate-btn");
+
+      let totalCourses = 0;
+      let completedCourses = 0;
+
+      // Display Dashboard when form is submitted
+      startDashboardBtn.addEventListener("click", () => {
+        // Fetch and display profile picture
+        const profilePicURL =
+          profilePicInput.value || "https://via.placeholder.com/100";
+        profilePicDisplay.src = profilePicURL;
+
+        // Display user details
+        studentName.textContent = nameInput.value;
+        studentCollege.textContent = collegeInput.value;
+        studentEmail.textContent = emailInput.value;
+        studentPhone.textContent = phoneInput.value;
+        totalCourses = parseInt(numCoursesInput.value) || 0;
+        totalCoursesDisplay.textContent = totalCourses;
+
+        // Hide initial form and show dashboard
+        initialForm.style.display = "none";
+        dashboard.style.display = "block";
+
+        // Reset course list and progress bar
+        courseList.innerHTML = "";
+        completedCourses = 0;
+        updateProgressBar();
+      });
+
+      // Add course to the list
+      addCourseBtn.addEventListener("click", () => {
+        const courseName = courseNameInput.value.trim();
+        if (courseName) {
+          const li = document.createElement("li");
+          li.className = "course-item";
+
+          li.innerHTML = `
+                    <span>${courseName}</span>
+                    <button class="complete-course-btn">Mark as Completed</button>
+                `;
+
+          courseList.appendChild(li);
+          courseNameInput.value = "";
+
+          // Update total courses
+          totalCourses++;
+          totalCoursesDisplay.textContent = totalCourses;
+
+          // Add event listener for marking course as completed
+          const completeCourseBtn = li.querySelector(".complete-course-btn");
+          completeCourseBtn.addEventListener("click", () => {
+            li.classList.add("completed");
+            li.querySelector("button").style.display = "none";
+
+            completedCourses++;
+            completedCoursesDisplay.textContent = completedCourses;
+            updateProgressBar();
+          });
+        }
+      });
+
+      // Update progress bar
+      function updateProgressBar() {
+        const progress =
+          totalCourses > 0 ? (completedCourses / totalCourses) * 100 : 0;
+        progressBarFill.style.width = `${progress}%`;
+        progressBarFill.textContent = `${Math.round(progress)}%`;
+
+        // Show certificate button if all courses are completed
+        if (completedCourses === totalCourses && totalCourses > 0) {
+          certificateBtn.style.display = "block";
+        } else {
+          certificateBtn.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
