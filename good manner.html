@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist with Progress</title>
+    <link rel="stylesheet" href="good manner.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <button id="toggleSidebar" class="arrow-btn"></button>
+      <div class="sidebar">
+        <button id="exitButton" class="exit-btn">Exit</button>
+        <br />
+        <br />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        <ul id="videoList">
+          <li>
+            <a href="#" data-video-id="GkipANiBspE"
+              >Video 1: Show respect to Elders
+              <span class="playing-symbol">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div> </span
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-video-id="yrVwiwQm_8Y">Video 2: Stop using bad language</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="TPhabSkn3sM">Video 3: Saying Thankyou</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="ECsuLalo-JI"
+              >Video 4: Asking permission before touching other people's property</a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="xONvT7Ymce8">Video 5: Do not talk while eating</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="uo0doESIYN8">Video 6: Listen and don't interrupt when people are speaking</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="sxgkgm4NVNU">Video 7: Always speak the truth</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="asjAHPXM-nA">Video 8: Being kind and compassionate</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="CfIz7SKVnC4">Video 9: Stop wasting food</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="PsUrZUz7esk">Video 10: Being punctual</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="YE2GyKPTXNQ">Video 11: Wait for your turn</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="SaAxYkhyLKs">Video 12: Respect others' personal space</a>
+          </li>
+
+         
+          <li id="quizLinkItem" style="display: none">
+            <button id="quizButton">Take the Quiz</button>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="player"></div>
+        <div id="quizContent"></div>
+        <div class="simple-buttons">
+          <button id="startFromBeginning">Start from Beginning</button>
+          <button id="prevVideo">Previous</button>
+          <button id="nextVideo">Next</button>
+          <button id="markAsComplete">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="good manner.js"></script>
+  </body>
+</html>
