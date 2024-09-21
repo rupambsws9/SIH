@@ -2,102 +2,159 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="login.css" />
+    <title>Professional Login Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(120deg, #2980b9, #6dd5fa);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-container {
+        background: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+      }
+
+      .login-container h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        background: #2980b9;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .login-container button:hover {
+        background: #3498db;
+      }
+
+      .error-message {
+        color: #e74c3c;
+        font-size: 14px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .success-message {
+        color: #2ecc71;
+        font-size: 14px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .signup-btn:hover {
+        background-color: #5b1ba8;
+      }
+
+      .login-link {
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .login-link a {
+        color: #7d2ae8;
+        text-decoration: none;
+      }
+
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
-                >Exit</a
-              >
-            </li>
-          </ul>
-        </div>
+    <div class="login-container">
+      <h1>Login</h1>
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter your username"
+        required
+      />
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        required
+      />
+      <button id="login-btn">Login</button>
+      <br />
+      <br />
+      <p class="error-message" id="error-message">
+        Invalid password. Please try again.
+      </p>
+      <p class="success-message" id="success-message">
+        Login successful! Redirecting...
+      </p>
+      <div class="signUp-link">
+        Don't have an account? <a href="signup.html">SignUp here</a>
       </div>
-    </nav>
-    <div class="topRow">
-      <button id="button-openform">
-        <p>
-          <i class="bi bi-person-circle"></i
-          ><span class="non-italic"> Login</span>
-        </p>
-      </button>
     </div>
-    <!-- Login form begins -->
-    <section class="admin">
-      <div class="container-login">
-        <div class="closeButton"><i class="bi bi-x-lg"></i></div>
-        <form action="">
-          <label for="login-username">Username</label>
-          <input
-            type="text"
-            name="username"
-            id="login-username"
-            placeholder="Enter your Username"
-          />
 
-          <label for="login-password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="login-password"
-            placeholder="Enter your Password"
-          />
+    <script>
+      const loginBtn = document.getElementById("login-btn");
+      const errorMessage = document.getElementById("error-message");
+      const successMessage = document.getElementById("success-message");
 
-          <div class="loginbuttons">
-            <button class="button-login" type="submit">Login</button>
-            <button class="button-login-signup" id="signup">Sign Up</a</button>
-          </div>
-          <a class="forgetPWLink" href="#">Forget Password</a>
-        </form>
-      </div>
+      // Define the correct password
+      const correctPassword = "1234";
 
-      <div class="forgetPW">
-        <div class="closeButtonForgetPW"><i class="bi bi-x-lg"></i></div>
-        <form action="">
-          <label for="forget-username">Username</label>
-          <input
-            type="text"
-            name="username"
-            id="forget-username"
-            placeholder="Enter your Username"
-          />
+      loginBtn.addEventListener("click", function () {
+        const usernameInput = document.getElementById("username").value;
+        const passwordInput = document.getElementById("password").value;
 
-          <label for="forget-email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="forget-email"
-            placeholder="Enter your Email"
-          />
+        if (passwordInput === correctPassword) {
+          // Hide error message and show success message
+          errorMessage.style.display = "none";
+          successMessage.style.display = "block";
 
-          <button class="forgetPWBtn" type="submit">Submit</button>
-          <p>Note - Password is sent to registered Email</p>
-        </form>
-      </div>
-    </section>
-    <!-- login form ends -->
-    <script src="login.js"></script>
+          // Store username and password in localStorage
+          localStorage.setItem("username", usernameInput);
+          localStorage.setItem("password", passwordInput);
+
+          // Simulate redirection after 2 seconds
+          setTimeout(function () {
+            window.location.href = "dashboard.html"; // Redirect to dashboard page
+          }, 2000);
+        } else {
+          // Show error message and hide success message
+          errorMessage.style.display = "block";
+          successMessage.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
