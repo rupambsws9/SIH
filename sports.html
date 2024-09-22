@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist with Progress</title>
+    <link rel="stylesheet" href="sports.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <button id="toggleSidebar" class="arrow-btn"></button>
+      <div class="sidebar">
+        <button id="exitButton" class="exit-btn">Exit</button>
+        <br />
+        <br />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        <ul id="videoList">
+          <li>
+            <a href="#" data-video-id="U6nnRte5M70"
+              >Video 1: Sports education and importance of physical education
+              <span class="playing-symbol">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div> </span
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-video-id="IEluFKIoChI">Video 2: Soccer</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="VwII4y5vpyU">Video 3: Cricket</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="oyjYgmsM00Q"
+              >Video 4: Basketball</a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="jxhuopeNAHE">Video 5: Volleyball</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="KCaxZaIZYs8">Video 6: Tennis</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="8gVvGAWJGps">Video 7: Swimming</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="ttDnA14EhdM">Video 8: Running </a>
+          </li>
+          <li>
+            <a href="#" data-video-id="99nN7WWNF1Q">Video 9: Golf</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="dg2IYoXil6M">Video 10: basic knowledge about Olympics</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="oFl3nkghbHE">Video 11: Basic gymnastics for kids</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="CITc2AxYnPY">Video 12: Basic yoga education</a>
+          </li>
+
+          
+        </ul>
+      </div>
+      <div class="content">
+        <div id="player"></div>
+        <div id="quizContent"></div>
+        <div class="simple-buttons">
+          <button id="startFromBeginning">Start from Beginning</button>
+          <button id="prevVideo">Previous</button>
+          <button id="nextVideo">Next</button>
+          <button id="markAsComplete">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="sports.js"></script>
+  </body>
+</html>

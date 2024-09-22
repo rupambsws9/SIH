@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist with Progress</title>
+    <link rel="stylesheet" href="english.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <button id="toggleSidebar" class="arrow-btn"></button>
+      <div class="sidebar">
+        <button id="exitButton" class="exit-btn">Exit</button>
+        <br />
+        <br />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        <ul id="videoList">
+          <li>
+            <a href="#" data-video-id="PLii5rkhsE0LecNHNQfsrFcxoG0ki_KVo_"
+              >Video 1: theme english study
+              <span class="playing-symbol">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div> </span
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-video-id="7HUW_aukApo?">Video 2: English phrases</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="JkttgRvCL3g?">Video 3:Verbs </a>
+          </li>
+          <li>
+            <a href="#" data-video-id="ql9-75jhQxE?"
+              >Video 4:Numbers and color </a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="8irSFvoyLHQ">Video 5: Diologues </a>
+          </li>
+          <li>
+            <a href="#" data-video-id="hZsM7fD9b80">Video 6:basic english  </a>
+          </li>
+          <li>
+            <a href="#" data-video-id="by1QAoRcc-U?">Video 7: basic english</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="aMtGCqaq6zE?">Video 8: conversation</a>
+          </li>
+          <li>
+            <a href="#" data-video-id="FdlLsxR5AE0?">Video 9:speaking cartoons </a>
+          </li>
+          <li>
+            <a href="#" data-video-id="hFIGwwE1uAM?">Video 10:Body perts </a>
+          </li>
+          <li id="quizLinkItem" style="display: none">
+            <button id="quizButton">Take the Quiz</button>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="player"></div>
+        <div id="quizContent"></div>
+        <div class="simple-buttons">
+          <button id="startFromBeginning">Start from Beginning</button>
+          <button id="prevVideo">Previous</button>
+          <button id="nextVideo">Next</button>
+          <button id="markAsComplete">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="english.js"></script>
+  </body>
+</html>

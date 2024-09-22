@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist with Progress</title>
+    <link rel="stylesheet" href="history.css" />
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="container">
+      <button id="toggleSidebar" class="arrow-btn"></button>
+      <div class="sidebar">
+        <button id="exitButton" class="exit-btn">Exit</button>
+        <br />
+        <br />
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        <ul id="videoList">
+          <li>
+            <a href="#" data-video-id="PL6vCwGtCTVtMe7peK8PBzTGUO-H_XXGc6"
+              >Video 1: history of Indian king 
+              <span class="playing-symbol">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div> </span
+            ></a>
+          </li>
+            <li>
+                <a href="#" data-video-id="PLZS3MUjYqjUFuynZEzXXOMF3koo024l_0"
+                  >Video 2: ancient history
+                ></a>
+              </li>
+          </li>
+            <a href="#" data-video-id="PLZS3MUjYqjUFuynZEzXXOMF3koo024l_0"
+              > video 3:Indian history in hindi
+            ></a>
+          </li>
+          <li>
+            <a href="#" data-video-id="ML_UlJqSHLQ?"
+              >Video 4:Jhansi ki rani </a
+            >
+          </li>
+          <li>
+            <a href="#" data-video-id="rLFGra2TiTE">Video 5:prehistory </a>
+          </li>
+          <li>
+            <li>
+              <a href="#" data-video-id="Ygfwi1wjP9M?">Video 6:Indian mythology </a>
+            </li>
+            <li>
+              <li>
+                <a href="#" data-video-id="GZ7y-yFdX9M?">Video 7:coin invention </a>
+              </li>
+              <li>
+                <li>
+                  <a href="#" data-video-id="6J6UpxMxG_8?">Video 8: All about India</a>
+                </li>
+                <li>
+                  <li>
+                    <a href="#" data-video-id="MEpTX_EujRs?">Video 9:Ancient Egypt</a>
+                  </li>
+                  <li>
+                    <li>
+                      <a href="#" data-video-id="zYxC14pCaJ0">Video 10:Famouse inventions </a>
+                    </li>
+                    <li>
+          <li id="quizLinkItem" style="display: none">
+            <button id="quizButton">Take the Quiz</button>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div id="player"></div>
+        <div id="quizContent"></div>
+        <div class="simple-buttons">
+          <button id="startFromBeginning">Start from Beginning</button>
+          <button id="prevVideo">Previous</button>
+          <button id="nextVideo">Next</button>
+          <button id="markAsComplete">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+    <script src="history.js"></script>
+  </body>
+</html>
