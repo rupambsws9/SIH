@@ -143,7 +143,7 @@ document
     //   .catch((error) => console.error("Error loading quiz:", error));
   });
 document.getElementById("quizButton").addEventListener("click", function () {
-  window.location.href = "yoga_quiz.html";
+  window.location.href = "goodManner_quiz.html";
 });
 
 // Video link click logic
