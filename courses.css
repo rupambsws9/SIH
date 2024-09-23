@@ -1,14 +1,78 @@
-h1 {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: lightcyan; /* Light cyan background for the body */
+  color: #333; /* Dark text color */
+  position: relative; /* For absolute positioning of background */
   align-items: center;
+}
+
+h1 {
   text-align: center;
-  background-color: blue;
+  background-color: #007bff; /* A softer blue background */
   color: white;
+  padding: 20px; /* Padding for spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  margin-bottom: 30px; /* Space below the heading */
+  font-size: 2.5em; /* Larger font size for emphasis */
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: none; /* Remove default list styles */
   padding: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+}
+
+li {
+  margin: 30px 0; /* Increased margin for better spacing */
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  background-color: #28a745; /* Green button color */
+  color: white; /* White text */
+  padding: 15px 20px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Enhanced button shadow */
+  width: 100%; /* Full width buttons */
+  text-align: center; /* Center text */
+  font-size: 1.2em; /* Larger font size for buttons */
+}
+
+a:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #555; /* Gray color for footer text */
+  font-size: 0.9em; /* Smaller font size for footer */
+}
+
+@media (max-width: 600px) {
+  a {
+    width: 100%; /* Full width buttons on small screens */
+  }
+}
+
+/* Background effect for the body */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("path-to-your-background-image.jpg") no-repeat center center
+    fixed; /* Background image */
+  background-size: cover; /* Cover the entire background */
+  z-index: -1; /* Place behind other elements */
+  opacity: 0.1; /* Light opacity for a subtle effect */
 }
