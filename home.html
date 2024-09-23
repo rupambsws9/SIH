@@ -59,6 +59,8 @@
       <div class="ebook" id="eBookText">eBook</div>
       <div class="home" id="home">Home</div>
       <div class="courses" id="courses">Courses</div>
+      <div class="stdDash" id="stdDash">Student Dashboard</div>
+      <!-- <div class="logOut" id="logOut">LogOut</div> -->
       <div class="the-grameensikha-platform">
         The Grameensikha platform offers students an immersive learning
         experience through virtual classrooms and animated video lessons. It
@@ -139,9 +141,9 @@
           window.location.href = "contact.html";
         });
         document
-        .getElementById("contactUsText")
+        .getElementById("home")
         .addEventListener("click", function () {
-          window.location.href = "contact.html";
+          window.location.href = "#";
         });
         document
         .getElementById("courses")
@@ -163,6 +165,26 @@
         .addEventListener("click", function () {
           window.location.href = "courses.html";
         });
+        document
+        .getElementById("stdDash")
+        .addEventListener("click", function () {
+          window.location.href = "stdDash.html";
+        });
+
+//             // Check if user is logged in
+//     let loggedIn = localStorage.getItem("loggedIn");
+
+// if (loggedIn === "true") {
+//   // Hide the login and signup buttons
+//   document.getElementById("login").style.display = "none";
+//   document.getElementById("signUp").style.display = "none";
+// }else if (loggedIn === "false") {
+//   // Show the login and signup buttons
+//   document.getElementById("login").style.display = "block";
+//   document.getElementById("signUp").style.display = "block";
+//   // Hide the logout button
+//   document.getElementById("logOut").style.display = "none";
+// }
     </script>
   </body>
 </html>

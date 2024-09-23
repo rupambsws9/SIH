@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga Quiz</title>
+    <link rel="stylesheet" href="history_quiz.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div id="quiz-intro">
+        <h1>Welcome to the Yoga Quiz</h1>
+        <p>Total Questions: <span id="total-questions"></span></p>
+        <p>Total Time: <span id="total-time"></span></p>
+        <p>Total Marks: <span id="total-marks"></span></p>
+        <button id="start-btn">Start Quiz</button>
+      </div>
+      
+      <div id="quiz-content" style="display: none">
+        <div id="timer">Time Remaining: <span id="time-remaining">10:00</span></div>
+        <h2 id="question-number"></h2>
+        <p id="question-text"></p>
+        <div id="options-container"></div>
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="next-btn" disabled>Next</button>
+      </div>
+      
+      <div id="final-report" style="display: none">
+        <h2>Quiz Completed!</h2>
+        <div id="result"></div>
+        <div id="grade"></div>
+        <div id="pass-message" style="display: none;">
+            Congratulations! You passed!
+          </div>
+          <div id="counter-container" style="display: none;">
+            <div id="green-ring" class="ring">
+            <div id="counter" class="counter">0</div>
+        </div>
+          </div>
+        <button id="retry-btn" style="display: none">Retry Quiz</button>
+      </div>
+    <script src="history_quiz.js"></script>
+  </body>
+</html>

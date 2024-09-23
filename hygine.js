@@ -13,8 +13,7 @@ const videoIds = [
   "QGvw_e1N5Ho",
   "5HFh5KxML-4",
   "RsYgmatFPBk",
-  
-  ]; //all video IDs
+]; //all video IDs
 let currentVideoIndex = 0; // current video index
 const visitedVideos = new Set(); // visited videos
 let quizMode = false; // quiz mode is active or not
@@ -55,7 +54,7 @@ function changeVideo(index) {
 }
 
 function markVideoAsVisitedAndClicked(videoId) {
-  const currentVideo = document.querySelector([data-video-id="${videoId}"]);
+  const currentVideo = document.querySelector(`[data-video-id="${videoId}"]`);
   if (!currentVideo) return;
 
   // Check if the video is already marked as green (completed)
@@ -84,7 +83,7 @@ function checkVideoProgress() {
   const percentageWatched = (currentTime / duration) * 100;
 
   const videoId = player.getVideoData().video_id;
-  const currentVideo = document.querySelector([data-video-id="${videoId}"]);
+  const currentVideo = document.querySelector(`[data-video-id="${videoId}"]`);
 
   if (percentageWatched >= watchedThreshold) {
     if (currentVideo && !currentVideo.classList.contains("completed")) {
@@ -142,7 +141,7 @@ document
     //   .catch((error) => console.error("Error loading quiz:", error));
   });
 document.getElementById("quizButton").addEventListener("click", function () {
-  window.location.href = "yoga_quiz.html";
+  window.location.href = "hygine_quiz.html";
 });
 
 // Video link click logic
@@ -210,7 +209,7 @@ function updatePlayingAnimation() {
   clearPlayingAnimation();
 
   const videoId = videoIds[currentVideoIndex];
-  const currentVideo = document.querySelector([data-video-id="${videoId}"]);
+  const currentVideo = document.querySelector(`[data-video-id="${videoId}"]`);
 
   if (currentVideo && !currentVideo.classList.contains("completed")) {
     currentVideo.classList.add("playing-animation");
@@ -250,7 +249,7 @@ function updatePlayingAnimation() {
   clearPlayingAnimation();
 
   const videoId = videoIds[currentVideoIndex];
-  const currentVideo = document.querySelector([data-video-id="${videoId}"]);
+  const currentVideo = document.querySelector(`[data-video-id="${videoId}"]`);
 
   if (currentVideo) {
     currentVideo.classList.add("playing-animation");
@@ -296,7 +295,7 @@ function checkVideoProgress() {
   const percentageWatched = (currentTime / duration) * 100;
 
   const videoId = player.getVideoData().video_id;
-  const currentVideo = document.querySelector([data-video-id="${videoId}"]);
+  const currentVideo = document.querySelector(`[data-video-id="${videoId}"]`);
 
   if (
     percentageWatched >= watchedThreshold &&
@@ -323,7 +322,7 @@ document
   .getElementById("markAsComplete")
   .addEventListener("click", function () {
     const videoId = player.getVideoData().video_id;
-    const currentVideo = document.querySelector([data-video-id="${videoId}"]);
+    const currentVideo = document.querySelector(`[data-video-id="${videoId}"]`);
 
     if (currentVideo && !currentVideo.classList.contains("completed")) {
       currentVideo.classList.add("completed");
