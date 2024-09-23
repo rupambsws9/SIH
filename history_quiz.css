@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  background: #fff;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#quiz-intro {
+  text-align: center;
+}
+
+#quiz-intro h2 {
+  margin-bottom: 20px;
+}
+
+#quiz-intro p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+#start-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#start-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#timer {
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+#question-number,
+#question-text {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #ff6f61;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.option:hover {
+  background: linear-gradient(135deg, #ff6f61, #ff7e5f);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.option.selected {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  border-color: #ff9900;
+  color: #333;
+}
+
+.correct-answer {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  border-color: #388e3c;
+}
+
+.incorrect-answer {
+  background: linear-gradient(135deg, #f44336, #e57373);
+  border-color: #d32f2f;
+}
+
+.explanation {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #555;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* General button styling */
+button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Disabled button styling */
+button:disabled {
+  background-color: #ccc; /* Gray background when disabled */
+  cursor: not-allowed;
+}
+
+/* Specific styling for navigation buttons */
+#prev-btn,
+#next-btn {
+  margin: 20px;
+  width: 120px;
+  text-align: center;
+}
+
+/* Hover effect for disabled button */
+button:disabled:hover {
+  background-color: #ccc; /* Keep the gray color for disabled buttons */
+}
+
+#final-report {
+  background: white; /* White background for the report */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin: 20px auto; /* Center the report */
+  width: 80%; /* Responsive width */
+  max-width: 600px; /* Max width */
+}
+
+#result,
+#grade {
+  font-size: 1.5em; /* Larger font size for results */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+#pass-message {
+  font-size: 1.2em; /* Slightly larger font */
+  color: green; /* Green color for the pass message */
+  margin: 10px 0; /* Margin for spacing */
+}
+
+#counter-container {
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Column layout */
+  align-items: center; /* Center alignment */
+  margin-top: 20px; /* Margin on top */
+}
+
+.ring {
+  width: 100px;
+  height: 100px;
+  border: 10px solid green; /* Ring color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+  background: rgba(0, 255, 0, 0.1); /* Light green background inside the ring */
+}
+
+.counter {
+  position: absolute;
+  font-size: 24px; /* Larger font size */
+  color: green; /* Text color */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
