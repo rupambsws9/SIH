@@ -1,67 +1,55 @@
-// Login form elements
-const loginOpnBtn = document.querySelector("#button-openform");
-const loginBox = document.querySelector(".container-login");
-const signupOpnBtn = document.querySelector(".button-login-signup");
-const signupBox = document.querySelector(".container-signup");
-const closebtn = document.querySelector(".closeButton");
-const closebtnSignUp = document.querySelector(".closeButtonSignup");
-const forgetPWLin = document.querySelector(".forgetPWLink");
-const forgetP = document.querySelector(".forgetPW");
-const closeButtonForgetP = document.querySelector(".closeButtonForgetPW");
+const loginBtn = document.getElementById("login-btn");
+const errorMessage = document.getElementById("error-message");
+const successMessage = document.getElementById("success-message");
 
-// Toggle Login Form
-loginOpnBtn.addEventListener("click", function () {
-  loginBox.classList.toggle("show");
-  signupBox.classList.remove("show");
-  forgetP.classList.remove("show");
+// Define the correct password
+const correctPassword = "1234";
+
+loginBtn.addEventListener("click", function () {
+  const usernameInput = document.getElementById("username").value.trim();
+  const passwordInput = document.getElementById("password").value.trim();
+
+  // Basic validation: check if inputs are empty
+  if (!usernameInput || !passwordInput) {
+    showErrorMessage("Please fill in both fields.");
+    return;
+  }
+
+  // Check if password is correct
+  if (passwordInput === correctPassword) {
+    // Hide error message and show success message
+    hideErrorMessage();
+    showSuccessMessage("Login successful! Redirecting...");
+
+    // Store username and login status in localStorage
+    localStorage.setItem("username", usernameInput);
+    localStorage.setItem("loggedIn", "true"); // Set login flag
+
+    // Simulate redirection after 2 seconds
+    setTimeout(function () {
+      window.location.href = "home.html"; // Redirect to home page
+    }, 2000);
+  } else {
+    showErrorMessage("Invalid password. Please try again.");
+    hideSuccessMessage();
+  }
 });
 
-// Toggle Signup Form
-signupOpnBtn.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent form submission
-  signupBox.classList.toggle("show");
-  loginBox.classList.remove("show");
-  forgetP.classList.remove("show");
-});
+// Helper functions for showing and hiding messages
+function showErrorMessage(message) {
+  errorMessage.textContent = message;
+  errorMessage.style.display = "block";
+}
 
-// Toggle Forgot Password Form
-forgetPWLin.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent form submission
-  forgetP.classList.toggle("show");
-  loginBox.classList.remove("show");
-  signupBox.classList.remove("show");
-});
+function hideErrorMessage() {
+  errorMessage.style.display = "none";
+}
 
-// Close Forgot Password Form
-closeButtonForgetP.addEventListener("click", function () {
-  forgetP.classList.remove("show");
-});
+function showSuccessMessage(message) {
+  successMessage.textContent = message;
+  successMessage.style.display = "block";
+}
 
-// Handle Login Form Submission
-document
-  .querySelector(".container-login form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
-    const password = document.querySelector("#login-password").value;
-
-    if (password === "1234") {
-      alert("Login successful!");
-      window.location.href = "home.html"; // Redirect to another page
-    } else {
-      alert("Invalid password");
-    }
-  });
-
-// Add highlight effect on input focus
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("focus", function () {
-    this.classList.add("highlight");
-  });
-
-  input.addEventListener("blur", function () {
-    this.classList.remove("highlight");
-  });
-});
-document.getElementById("signup").addEventListener("click", function () {
-  window.location.href = "signup.html";
-});
+function hideSuccessMessage() {
+  successMessage.style.display = "none";
+}

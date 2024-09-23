@@ -123,38 +123,6 @@
         Don't have an account? <a href="signup.html">SignUp here</a>
       </div>
     </div>
-
-    <script>
-      const loginBtn = document.getElementById("login-btn");
-      const errorMessage = document.getElementById("error-message");
-      const successMessage = document.getElementById("success-message");
-
-      // Define the correct password
-      const correctPassword = "1234";
-
-      loginBtn.addEventListener("click", function () {
-        const usernameInput = document.getElementById("username").value;
-        const passwordInput = document.getElementById("password").value;
-
-        if (passwordInput === correctPassword) {
-          // Hide error message and show success message
-          errorMessage.style.display = "none";
-          successMessage.style.display = "block";
-
-          // Store username and password in localStorage
-          localStorage.setItem("username", usernameInput);
-          localStorage.setItem("password", passwordInput);
-
-          // Simulate redirection after 2 seconds
-          setTimeout(function () {
-            window.location.href = "dashboard.html"; // Redirect to dashboard page
-          }, 2000);
-        } else {
-          // Show error message and hide success message
-          errorMessage.style.display = "block";
-          successMessage.style.display = "none";
-        }
-      });
-    </script>
+    <script src="login.js"></script>
   </body>
 </html>

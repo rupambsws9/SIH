@@ -196,6 +196,7 @@
   position: absolute;
   top: 508px;
   left: 705px;
+  height: 15px;
   cursor: pointer;
 }
 .ebook {
@@ -218,8 +219,21 @@
   left: 1000px;
   cursor: pointer;
   width: 150px;
-  height: 20px;
+  height: 15px;
   color: #0056b3;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.logOut {
+  text-align: center;
+  position: absolute;
+  top: 508px;
+  left: 1250px;
+  cursor: pointer;
+  width: 150px;
+  height: 15px;
+  color: green;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
@@ -444,7 +458,8 @@ button,
 .courses,
 .signUp,
 .login,
-.stdDash {
+.stdDash,
+.logOut {
   border: 2px solid transparent;
   border-radius: var(--br-39xl);
   padding: 10px 20px;
@@ -461,7 +476,8 @@ button:hover,
 .quizes:hover,
 .ebook:hover,
 .courses:hover,
-.stdDash:hover {
+.stdDash:hover,
+.logOut:hover {
   border-color: #007bff; /* Border color on hover */
   background-color: #f0f8ff; /* Background color on hover */
   color: #007bff; /* Text color on hover */
@@ -476,7 +492,8 @@ button:active,
 .courses:active,
 .signUp:active,
 .login:active,
-.stdDash:active {
+.stdDash:active,
+.logOut:active {
   transform: scale(0.95); /* Slightly decrease size on click */
 }
 
@@ -491,6 +508,11 @@ button:active,
 .home {
   background: #e0f7fa;
   color: #00796b;
+}
+
+.logOut {
+  background: lightpink;
+  color: red;
 }
 
 .quizes {
