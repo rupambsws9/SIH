@@ -1,122 +1,107 @@
 const questions = {
-  goodManners: [
+  history: [
     {
-      text: "What is the polite way to ask for something?",
+      text: "Who was the first President of the United States?",
       options: [
-        "Give it to me",
-        "I want this now",
-        "Please may I have it?",
-        "You must give it to me",
-      ],
-      correctAnswer: 2,
-      explanation:
-        "Saying 'Please may I have it?' is the polite way to ask for something.",
-    },
-    {
-      text: "What should you do when someone gives you a gift?",
-      options: [
-        "Say nothing",
-        "Immediately ask for more",
-        "Say 'Thank you'",
-        "Ignore the gift",
-      ],
-      correctAnswer: 2,
-      explanation: "It's polite to say 'Thank you' when receiving a gift.",
-    },
-    {
-      text: "What is a good way to greet someone?",
-      options: [
-        "Ignore them",
-        "Smile and say 'Hello'",
-        "Stare silently",
-        "Walk away",
+        "Abraham Lincoln",
+        "George Washington",
+        "Thomas Jefferson",
+        "John Adams",
       ],
       correctAnswer: 1,
       explanation:
-        "Smiling and saying 'Hello' is a polite way to greet someone.",
+        "George Washington served as the first President from 1789 to 1797.",
     },
     {
-      text: "How should you behave at the dining table?",
+      text: "What year did the Titanic sink?",
+      options: ["1912", "1914", "1905", "1920"],
+      correctAnswer: 0,
+      explanation:
+        "The Titanic sank on April 15, 1912, during its maiden voyage.",
+    },
+    {
+      text: "Who wrote the Declaration of Independence?",
       options: [
-        "Talk with your mouth full",
-        "Chew quietly and use utensils properly",
-        "Put elbows on the table",
-        "Play with food",
+        "Benjamin Franklin",
+        "Thomas Jefferson",
+        "John Hancock",
+        "George Washington",
       ],
       correctAnswer: 1,
       explanation:
-        "Good table manners include chewing quietly and using utensils properly.",
+        "Thomas Jefferson was the principal author of the Declaration of Independence.",
     },
     {
-      text: "What is a respectful way to listen when someone is speaking?",
-      options: [
-        "Interrupt them",
-        "Talk over them",
-        "Pay attention and make eye contact",
-        "Ignore them",
-      ],
-      correctAnswer: 2,
+      text: "Which ancient civilization is known for its pyramids?",
+      options: ["Roman", "Greek", "Mayan", "Egyptian"],
+      correctAnswer: 3,
       explanation:
-        "Paying attention and making eye contact shows respect when listening.",
+        "The ancient Egyptians are famous for building pyramids as tombs for their pharaohs.",
     },
     {
-      text: "What should you say if you accidentally bump into someone?",
+      text: "What was the main cause of World War I?",
       options: [
-        "Say nothing",
-        "Run away",
-        "Say 'Excuse me' or 'I'm sorry'",
-        "Blame them",
-      ],
-      correctAnswer: 2,
-      explanation:
-        "Saying 'Excuse me' or 'I'm sorry' is the polite response when bumping into someone.",
-    },
-    {
-      text: "What should you do when entering a room where others are speaking?",
-      options: [
-        "Yell loudly",
-        "Politely wait for a pause and say 'Excuse me'",
-        "Interrupt immediately",
-        "Ignore them and walk in",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Waiting for a pause and saying 'Excuse me' is the polite way to enter a room.",
-    },
-    {
-      text: "How should you treat someone who is different from you?",
-      options: [
-        "Ignore them",
-        "Respect and be kind to them",
-        "Make fun of them",
-        "Tell them to change",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Good manners involve respecting and being kind to everyone, regardless of differences.",
-    },
-    {
-      text: "What is the appropriate way to respond when someone says 'Thank you'?",
-      options: [
-        "Say 'No problem'",
-        "Say 'You're welcome'",
-        "Ignore them",
-        "Say 'Don't mention it'",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Saying 'You're welcome' is a polite response to 'Thank you'.",
-    },
-    {
-      text: "When should you say 'Excuse me'?",
-      options: [
-        "When you want attention",
-        "When you're leaving a conversation",
-        "When you need to pass someone",
+        "Economic depression",
+        "Nationalism",
+        "Colonial expansion",
         "All of the above",
       ],
       correctAnswer: 3,
-      explanation: "Saying 'Excuse me' is polite in all these situations.",
+      explanation:
+        "Nationalism, economic interests, and colonial rivalries contributed to the outbreak of World War I.",
+    },
+    {
+      text: "Who was the first woman to fly solo across the Atlantic Ocean?",
+      options: [
+        "Amelia Earhart",
+        "Bessie Coleman",
+        "Harriet Quimby",
+        "Marie Curie",
+      ],
+      correctAnswer: 0,
+      explanation: "Amelia Earhart completed the solo flight in 1932.",
+    },
+    {
+      text: "What was the name of the ship that carried the Pilgrims to America?",
+      options: [
+        "The Mayflower",
+        "The Santa Maria",
+        "The Endeavour",
+        "The Beagle",
+      ],
+      correctAnswer: 0,
+      explanation: "The Mayflower carried the Pilgrims to America in 1620.",
+    },
+    {
+      text: "Which empire was known for its extensive road network?",
+      options: [
+        "The Roman Empire",
+        "The Mongol Empire",
+        "The Ottoman Empire",
+        "The Persian Empire",
+      ],
+      correctAnswer: 0,
+      explanation:
+        "The Roman Empire was famous for its extensive and sophisticated road network.",
+    },
+    {
+      text: "In what year did the Berlin Wall fall?",
+      options: ["1987", "1989", "1991", "1993"],
+      correctAnswer: 1,
+      explanation:
+        "The Berlin Wall fell on November 9, 1989, symbolizing the end of the Cold War.",
+    },
+    {
+      text: "Who was the famous civil rights leader known for his 'I Have a Dream' speech?",
+      options: [
+        "Malcolm X",
+        "Rosa Parks",
+        "Martin Luther King Jr.",
+        "Frederick Douglass",
+      ],
+      correctAnswer: 2,
+      explanation:
+        "Martin Luther King Jr. delivered his 'I Have a Dream' speech during the March on Washington in 1963.",
     },
   ],
 };
@@ -160,7 +145,7 @@ retryBtn.addEventListener("click", () => {
 });
 
 function startTimer() {
-  timeRemaining = questions.goodManners.length * 6 * 10; // Reset to 10 minutes
+  timeRemaining = questions.history.length * 6 * 10; // Reset to 10 minutes
   timerDisplay.innerText = formatTime(timeRemaining);
 
   timerInterval = setInterval(() => {
@@ -183,10 +168,10 @@ function formatTime(seconds) {
 }
 
 function loadQuestion(index) {
-  const question = questions.goodManners[index];
-  const totalMarks = questions.goodManners.length * 10; // 10 marks per question
+  const question = questions.history[index];
+  const totalMarks = questions.history.length * 10; // 10 marks per question
   questionNumber.innerText = `Question ${index + 1} of ${
-    questions.goodManners.length
+    questions.history.length
   } - Marks: ${correctAnswers * 10} / ${totalMarks}`;
   questionText.innerText = question.text;
   optionsContainer.innerHTML = "";
@@ -206,7 +191,7 @@ function loadQuestion(index) {
 }
 
 function updateQuizDetails() {
-  const totalQuestions = questions.goodManners.length;
+  const totalQuestions = questions.history.length;
   const totalTime = totalQuestions; // 1 minute per question
   const totalMarks = totalQuestions * 10; // 10 marks per question
 
@@ -220,7 +205,7 @@ function selectOption(questionIndex, optionIndex) {
 
   selectedOptions[questionIndex] = optionIndex;
 
-  const question = questions.goodManners[questionIndex];
+  const question = questions.history[questionIndex];
   const selectedOptionElement = optionsContainer.children[optionIndex];
   const correctOptionElement =
     optionsContainer.children[question.correctAnswer];
@@ -257,7 +242,7 @@ nextBtn.addEventListener("click", () => {
     explanationDiv.remove();
   }
 
-  if (currentQuestionIndex < questions.goodManners.length - 1) {
+  if (currentQuestionIndex < questions.history.length - 1) {
     currentQuestionIndex++;
     loadQuestion(currentQuestionIndex);
   } else {
@@ -277,7 +262,7 @@ function showFinalReport() {
   quizContent.style.display = "none";
   finalReport.style.display = "block";
 
-  const totalQuestions = questions.goodManners.length;
+  const totalQuestions = questions.history.length;
   const percentage = ((correctAnswers / totalQuestions) * 100).toFixed(2);
 
   resultDiv.innerText = `You answered ${correctAnswers} out of ${totalQuestions} questions correctly.`;
@@ -292,7 +277,6 @@ function showFinalReport() {
     }, 5000);
   } else {
     passMessage.style.display = "none"; // Hide pass message
-    retryBtn.style.display = "block"; // Show retry button
   }
 }
 
@@ -310,9 +294,9 @@ function showFinalReport() {
   quizContent.style.display = "none";
   finalReport.style.display = "block";
 
-  const totalMarks = questions.goodManners.length * 10;
+  const totalMarks = questions.history.length * 10;
   const marksScored = correctAnswers * 10;
-  const totalQuestions = questions.goodManners.length; // Get total number of questions
+  const totalQuestions = questions.history.length; // Get total number of questions
   resultDiv.innerText = `You answered ${correctAnswers} out of ${totalQuestions} questions correctly.`;
   const percentage = (marksScored / totalMarks) * 100;
 
@@ -322,7 +306,6 @@ function showFinalReport() {
     passMessage.style.display = "block"; // Show the pass message
     passMessage.innerText = "Congratulations! You passed!";
     document.getElementById("counter-container").style.display = "block"; // Show the counter container
-
     let counter = 0;
     const totalCount = 10; // Adjust this value as needed for the counter
 
