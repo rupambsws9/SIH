@@ -208,6 +208,24 @@
   position: absolute;
   top: 508px;
   left: 41px;
+  cursor: pointer;
+}
+
+.stdDash {
+  text-align: center;
+  position: absolute;
+  top: 508px;
+  left: 1000px;
+  cursor: pointer;
+  width: 150px;
+  height: 20px;
+  color: #0056b3;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.stdDash:hover {
+  color: #0088ff; /* Lighter blue on hover */
 }
 
 .courses {
@@ -425,7 +443,8 @@ button,
 .ebook,
 .courses,
 .signUp,
-.login {
+.login,
+.stdDash {
   border: 2px solid transparent;
   border-radius: var(--br-39xl);
   padding: 10px 20px;
@@ -441,7 +460,8 @@ button:hover,
 .home:hover,
 .quizes:hover,
 .ebook:hover,
-.courses:hover {
+.courses:hover,
+.stdDash:hover {
   border-color: #007bff; /* Border color on hover */
   background-color: #f0f8ff; /* Background color on hover */
   color: #007bff; /* Text color on hover */
@@ -455,7 +475,8 @@ button:active,
 .ebook:active,
 .courses:active,
 .signUp:active,
-.login:active {
+.login:active,
+.stdDash:active {
   transform: scale(0.95); /* Slightly decrease size on click */
 }
 
@@ -478,6 +499,11 @@ button:active,
 }
 
 .ebook {
+  background: #fff3e0;
+  color: #fb8c00;
+}
+
+.stdDash {
   background: #fff3e0;
   color: #fb8c00;
 }
