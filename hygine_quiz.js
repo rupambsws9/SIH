@@ -1,122 +1,118 @@
 const questions = {
-  goodManners: [
+  hygiene: [
     {
-      text: "What is the polite way to ask for something?",
+      text: "When should you wash your hands?",
       options: [
-        "Give it to me",
-        "I want this now",
-        "Please may I have it?",
-        "You must give it to me",
-      ],
-      correctAnswer: 2,
-      explanation:
-        "Saying 'Please may I have it?' is the polite way to ask for something.",
-    },
-    {
-      text: "What should you do when someone gives you a gift?",
-      options: [
-        "Say nothing",
-        "Immediately ask for more",
-        "Say 'Thank you'",
-        "Ignore the gift",
-      ],
-      correctAnswer: 2,
-      explanation: "It's polite to say 'Thank you' when receiving a gift.",
-    },
-    {
-      text: "What is a good way to greet someone?",
-      options: [
-        "Ignore them",
-        "Smile and say 'Hello'",
-        "Stare silently",
-        "Walk away",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Smiling and saying 'Hello' is a polite way to greet someone.",
-    },
-    {
-      text: "How should you behave at the dining table?",
-      options: [
-        "Talk with your mouth full",
-        "Chew quietly and use utensils properly",
-        "Put elbows on the table",
-        "Play with food",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Good table manners include chewing quietly and using utensils properly.",
-    },
-    {
-      text: "What is a respectful way to listen when someone is speaking?",
-      options: [
-        "Interrupt them",
-        "Talk over them",
-        "Pay attention and make eye contact",
-        "Ignore them",
-      ],
-      correctAnswer: 2,
-      explanation:
-        "Paying attention and making eye contact shows respect when listening.",
-    },
-    {
-      text: "What should you say if you accidentally bump into someone?",
-      options: [
-        "Say nothing",
-        "Run away",
-        "Say 'Excuse me' or 'I'm sorry'",
-        "Blame them",
-      ],
-      correctAnswer: 2,
-      explanation:
-        "Saying 'Excuse me' or 'I'm sorry' is the polite response when bumping into someone.",
-    },
-    {
-      text: "What should you do when entering a room where others are speaking?",
-      options: [
-        "Yell loudly",
-        "Politely wait for a pause and say 'Excuse me'",
-        "Interrupt immediately",
-        "Ignore them and walk in",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Waiting for a pause and saying 'Excuse me' is the polite way to enter a room.",
-    },
-    {
-      text: "How should you treat someone who is different from you?",
-      options: [
-        "Ignore them",
-        "Respect and be kind to them",
-        "Make fun of them",
-        "Tell them to change",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Good manners involve respecting and being kind to everyone, regardless of differences.",
-    },
-    {
-      text: "What is the appropriate way to respond when someone says 'Thank you'?",
-      options: [
-        "Say 'No problem'",
-        "Say 'You're welcome'",
-        "Ignore them",
-        "Say 'Don't mention it'",
-      ],
-      correctAnswer: 1,
-      explanation:
-        "Saying 'You're welcome' is a polite response to 'Thank you'.",
-    },
-    {
-      text: "When should you say 'Excuse me'?",
-      options: [
-        "When you want attention",
-        "When you're leaving a conversation",
-        "When you need to pass someone",
+        "Before eating",
+        "After using the restroom",
+        "After sneezing or coughing",
         "All of the above",
       ],
       correctAnswer: 3,
-      explanation: "Saying 'Excuse me' is polite in all these situations.",
+      explanation: "You should wash your hands in all of these situations.",
+    },
+    {
+      text: "How long should you wash your hands for to ensure they are clean?",
+      options: ["5 seconds", "10 seconds", "20 seconds", "1 minute"],
+      correctAnswer: 2,
+      explanation:
+        "It is recommended to wash your hands for at least 20 seconds to remove germs effectively.",
+    },
+    {
+      text: "Which of these is important for good dental hygiene?",
+      options: [
+        "Brushing your teeth twice a day",
+        "Eating candy frequently",
+        "Not brushing your teeth at all",
+        "Only brushing your teeth once a week",
+      ],
+      correctAnswer: 0,
+      explanation:
+        "Brushing your teeth twice a day helps prevent cavities and keeps your mouth healthy.",
+    },
+    {
+      text: "What should you do after sneezing or coughing into your hands?",
+      options: [
+        "Ignore it and carry on",
+        "Shake hands with someone",
+        "Wash your hands or use hand sanitizer",
+        "Touch your face",
+      ],
+      correctAnswer: 2,
+      explanation:
+        "Always wash your hands or use hand sanitizer after sneezing or coughing into them to avoid spreading germs.",
+    },
+    {
+      text: "What is the best way to cover your mouth when you cough or sneeze?",
+      options: [
+        "With your hands",
+        "With your elbow or a tissue",
+        "Without covering it",
+        "By turning away",
+      ],
+      correctAnswer: 1,
+      explanation:
+        "Using your elbow or a tissue to cover your mouth helps prevent the spread of germs.",
+    },
+    {
+      text: "Why is it important to keep your nails clean?",
+      options: [
+        "To look nice",
+        "To prevent germs from spreading",
+        "To grow them longer",
+        "No reason",
+      ],
+      correctAnswer: 1,
+      explanation:
+        "Keeping your nails clean prevents the accumulation of dirt and bacteria, reducing the spread of germs.",
+    },
+    {
+      text: "How often should you change your clothes, especially after sweating?",
+      options: [
+        "Once a week",
+        "After every workout or heavy sweating",
+        "Only when they smell",
+        "Every day",
+      ],
+      correctAnswer: 1,
+      explanation:
+        "Changing clothes after sweating helps to maintain good hygiene and prevent skin infections.",
+    },
+    {
+      text: "What should you use to clean your ears?",
+      options: [
+        "A cotton swab",
+        "Your finger",
+        "Nothing, let them clean themselves",
+        "A pencil",
+      ],
+      correctAnswer: 2,
+      explanation:
+        "The ears are self-cleaning, and using objects like cotton swabs can push wax deeper or cause injury.",
+    },
+    {
+      text: "How often should you take a shower or bath to maintain personal hygiene?",
+      options: [
+        "Once a month",
+        "Every day or every other day",
+        "Once a week",
+        "Only when you feel dirty",
+      ],
+      correctAnswer: 1,
+      explanation:
+        "Showering daily or every other day is recommended to remove dirt, sweat, and germs from the skin.",
+    },
+    {
+      text: "What is the best way to prevent bad body odor?",
+      options: [
+        "Washing regularly and using deodorant",
+        "Ignoring it",
+        "Wearing lots of perfume",
+        "Washing only when it smells bad",
+      ],
+      correctAnswer: 0,
+      explanation:
+        "Regular washing and using deodorant helps to prevent bad body odor by keeping your skin clean and fresh.",
     },
   ],
 };
@@ -160,7 +156,7 @@ retryBtn.addEventListener("click", () => {
 });
 
 function startTimer() {
-  timeRemaining = questions.goodManners.length * 6 * 10; // Reset to 10 minutes
+  timeRemaining = questions.hygiene.length * 6 * 10; // Reset to 10 minutes
   timerDisplay.innerText = formatTime(timeRemaining);
 
   timerInterval = setInterval(() => {
@@ -183,10 +179,10 @@ function formatTime(seconds) {
 }
 
 function loadQuestion(index) {
-  const question = questions.goodManners[index];
-  const totalMarks = questions.goodManners.length * 10; // 10 marks per question
+  const question = questions.hygiene[index];
+  const totalMarks = questions.hygiene.length * 10; // 10 marks per question
   questionNumber.innerText = `Question ${index + 1} of ${
-    questions.goodManners.length
+    questions.hygiene.length
   } - Marks: ${correctAnswers * 10} / ${totalMarks}`;
   questionText.innerText = question.text;
   optionsContainer.innerHTML = "";
@@ -206,7 +202,7 @@ function loadQuestion(index) {
 }
 
 function updateQuizDetails() {
-  const totalQuestions = questions.goodManners.length;
+  const totalQuestions = questions.hygiene.length;
   const totalTime = totalQuestions; // 1 minute per question
   const totalMarks = totalQuestions * 10; // 10 marks per question
 
@@ -220,7 +216,7 @@ function selectOption(questionIndex, optionIndex) {
 
   selectedOptions[questionIndex] = optionIndex;
 
-  const question = questions.goodManners[questionIndex];
+  const question = questions.hygiene[questionIndex];
   const selectedOptionElement = optionsContainer.children[optionIndex];
   const correctOptionElement =
     optionsContainer.children[question.correctAnswer];
@@ -257,7 +253,7 @@ nextBtn.addEventListener("click", () => {
     explanationDiv.remove();
   }
 
-  if (currentQuestionIndex < questions.goodManners.length - 1) {
+  if (currentQuestionIndex < questions.hygiene.length - 1) {
     currentQuestionIndex++;
     loadQuestion(currentQuestionIndex);
   } else {
@@ -277,7 +273,7 @@ function showFinalReport() {
   quizContent.style.display = "none";
   finalReport.style.display = "block";
 
-  const totalQuestions = questions.goodManners.length;
+  const totalQuestions = questions.hygiene.length;
   const percentage = ((correctAnswers / totalQuestions) * 100).toFixed(2);
 
   resultDiv.innerText = `You answered ${correctAnswers} out of ${totalQuestions} questions correctly.`;
@@ -310,9 +306,9 @@ function showFinalReport() {
   quizContent.style.display = "none";
   finalReport.style.display = "block";
 
-  const totalMarks = questions.goodManners.length * 10;
+  const totalMarks = questions.hygiene.length * 10;
   const marksScored = correctAnswers * 10;
-  const totalQuestions = questions.goodManners.length; // Get total number of questions
+  const totalQuestions = questions.hygiene.length; // Get total number of questions
   resultDiv.innerText = `You answered ${correctAnswers} out of ${totalQuestions} questions correctly.`;
   const percentage = (marksScored / totalMarks) * 100;
 
