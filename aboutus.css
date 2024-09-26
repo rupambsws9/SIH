@@ -1,51 +1,129 @@
-.number1img,
-.number2img,
-.number3img,
-.number5img,
-.number7img {
-  object-fit: cover; /* Ensures image fits the container while maintaining aspect ratio */
-  border-radius: 8px; /* Adds rounded corners for a better look */
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: #eef2f5;
+  color: #333;
+  line-height: 1.6;
+  background-image: linear-gradient(to right, #6a11cb, #2575fc);
+  background-attachment: fixed;
 }
 
-.number1img {
-  margin: 10% 5%;
-  height: auto;
-  width: 100px; /* Fix width and allow height to adjust */
+/* Page Container */
+.responsive-container-block {
+  width: 100%;
+  padding: 60px 20px;
 }
 
-.number2img {
-  margin: 15% 10%;
-  width: 150px;
-  height: auto; /* Automatically adjusts height */
+/* Heading Styling */
+.heading {
+  font-size: 4rem;
+  font-weight: 900;
+  color: blue; /* Bold coral red */
+  background: yellow;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow for emphasis */
+  text-align: center; /* Aligns the text to the center */
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-transform: uppercase; /* Adds uppercase styling */
+  border-bottom: 3px solid white; /* Bottom border for emphasis */
+  width: 100%; /* Takes up full width */
+  display: block; /* Block-level element to center the text */
+}
+/* About Us Text */
+.subHeading {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  color: #e3f2fd; /* Light blue for better contrast */
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-style: italic; /* Italicized text */
+  font-weight: 300; /* Lighter font weight */
+  letter-spacing: 1px; /* Added letter spacing */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background for text */
+  padding: 20px;
+  border-radius: 10px; /* Soft rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Light shadow */
 }
 
-.number3img {
-  width: 100px;
-  height: auto;
-  margin: 20% 15%;
+.subHeading::first-letter {
+  font-size: 2rem;
+  color: #ff6b6b;
+  font-weight: 700;
 }
 
-.number5img {
-  width: 120px;
-  height: auto;
-  margin: 25% 5%;
+/* Image Section */
+.rightSide {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
 }
 
-.number7img {
-  width: 120px;
-  height: auto;
-  margin: 20% 15%;
+.rightSide img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.rightSide img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 3.2rem;
+  }
+
+  .subHeading {
+    font-size: 1.2rem;
+  }
+
+  .rightSide img {
+    width: 140px;
+    height: 140px;
+  }
+}
 
 @media (max-width: 768px) {
-    .number1img,
-    .number2img,
-    .number3img,
-    .number5img,
-    .number7img {
-      width: 80px;
-      height: auto; /* Maintain aspect ratio */
-      margin: 10px;
-    }
+  .heading {
+    font-size: 2.5rem;
   }
+
+  .subHeading {
+    font-size: 1.1rem;
+  }
+
+  .rightSide img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subHeading {
+    font-size: 1rem;
+  }
+
+  .rightSide img {
+    width: 100px;
+    height: 100px;
+  }
+}
